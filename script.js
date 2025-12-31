@@ -10,11 +10,13 @@ const app = {
   async init() {
     this.cacheDOM();
     this.bindEvents();
-    
+
     try {
       const response = await fetch('words.json');
       if (!response.ok) throw new Error("Failed to load");
       this.words = await response.json();
+      // 1) Shuffle words randomly on load
+      this.words.sort(() => Math.random() - 0.5);
     } catch (e) {
       console.warn("Could not load words.json, using fallback data.", e);
       // Fallback data for testing/offline
@@ -25,6 +27,7 @@ const app = {
         { word: "Mellifluous", abbreviation: "Mel", meaning: "Sweet or musical; pleasant to hear." },
         { word: "Labyrinthine", abbreviation: "Lab", meaning: "Irregular and twisting." }
       ];
+      this.words.sort(() => Math.random() - 0.5);
     }
 
     if (this.words.length > 0) {
@@ -43,8 +46,11 @@ const app = {
   },
 
   bindEvents() {
+    // 2) Add touchstart for better mobile responsiveness feeling (remove 300ms delay)
     this.dom.btnFlashcards.addEventListener('click', () => this.switchMode('flashcards'));
+    this.dom.btnFlashcards.addEventListener('touchstart', () => { }, { passive: true }); // IOS active state fix
     this.dom.btnQuiz.addEventListener('click', () => this.switchMode('quiz'));
+    this.dom.btnQuiz.addEventListener('touchstart', () => { }, { passive: true }); // IOS active state fix
   },
 
   switchMode(newMode) {
@@ -53,7 +59,7 @@ const app = {
     this.currentIndex = 0;
     this.isFlipped = false;
     this.score = 0;
-    
+
     // Update Nav
     this.dom.btnFlashcards.classList.toggle('active', newMode === 'flashcards');
     this.dom.btnQuiz.classList.toggle('active', newMode === 'quiz');
@@ -67,7 +73,7 @@ const app = {
 
   render() {
     this.dom.container.innerHTML = '';
-    
+
     if (this.mode === 'flashcards') {
       this.renderFlashcard();
     } else {
@@ -78,10 +84,10 @@ const app = {
   /* --- FLASHCARD LOGIC --- */
   renderFlashcard() {
     const word = this.words[this.currentIndex];
-    
+
     const container = document.createElement('div');
     container.className = 'card-container';
-    
+
     container.innerHTML = `
       <div class="card ${this.isFlipped ? 'flipped' : ''}">
         <div class="card-face card-front">
@@ -102,7 +108,7 @@ const app = {
 
     const controls = document.createElement('div');
     controls.className = 'controls';
-    
+
     const prevBtn = document.createElement('button');
     prevBtn.className = 'action-btn';
     prevBtn.textContent = '← Prev';
@@ -114,7 +120,7 @@ const app = {
     nextBtn.onclick = (e) => { e.stopPropagation(); this.nextCard(); };
 
     controls.append(prevBtn, nextBtn);
-    
+
     this.dom.container.append(container, controls);
   },
 
@@ -124,10 +130,10 @@ const app = {
       this.isFlipped = false;
       this.render();
     } else {
-       // Loop back or finish? Let's loop for now
-       this.currentIndex = 0;
-       this.isFlipped = false;
-       this.render();
+      // Loop back or finish? Let's loop for now
+      this.currentIndex = 0;
+      this.isFlipped = false;
+      this.render();
     }
   },
 
@@ -146,7 +152,7 @@ const app = {
     const others = this.words.filter((_, i) => i !== this.currentIndex);
     // Shuffle others and pick 3
     const distractors = others.sort(() => 0.5 - Math.random()).slice(0, 3);
-    
+
     const options = [...distractors, currentWord];
     // Shuffle options
     this.quizOptions = options.sort(() => 0.5 - Math.random());
@@ -156,10 +162,10 @@ const app = {
 
   renderQuiz() {
     const currentWord = this.words[this.currentIndex];
-    
+
     const quizDiv = document.createElement('div');
     quizDiv.className = 'quiz-container';
-    
+
     quizDiv.innerHTML = `
       <div class="question-text">What does <span style="color:#38bdf8; font-weight:bold;">${currentWord.word}</span> mean?</div>
       <div class="options-grid" id="options-grid"></div>
@@ -169,7 +175,7 @@ const app = {
     `;
 
     const grid = quizDiv.querySelector('#options-grid');
-    
+
     this.quizOptions.forEach((opt, idx) => {
       const btn = document.createElement('button');
       btn.className = 'option-btn';
@@ -185,10 +191,10 @@ const app = {
     };
 
     if (this.hasAnswered) {
-       // Re-apply states if re-rendering (though we usually don't full re-render in quiz interaction, but good for safety)
-       quizDiv.querySelector('#quiz-controls').style.visibility = 'visible';
-       // We'd need to re-mark matched buttons here if we strictly followed re-render logic.
-       // For simplicity in this vanilla implementation, we'll rely on handleAnswer to manipulate DOM directly.
+      // Re-apply states if re-rendering (though we usually don't full re-render in quiz interaction, but good for safety)
+      quizDiv.querySelector('#quiz-controls').style.visibility = 'visible';
+      // We'd need to re-mark matched buttons here if we strictly followed re-render logic.
+      // For simplicity in this vanilla implementation, we'll rely on handleAnswer to manipulate DOM directly.
     }
 
     this.dom.container.append(quizDiv);
@@ -197,9 +203,9 @@ const app = {
   handleAnswer(idx, btn, grid) {
     if (this.hasAnswered) return;
     this.hasAnswered = true;
-    
+
     const allBtns = grid.querySelectorAll('.option-btn');
-    
+
     if (idx === this.correctOptionIndex) {
       btn.classList.add('correct');
       // maybe play sound?
