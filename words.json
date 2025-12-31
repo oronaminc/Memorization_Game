@@ -4,8 +4,7 @@
         "abbreviation": "Baseboard Management Controller",
         "meaning": "서버 메인보드에 탑재된 하드웨어 관리 전용 컨트롤러. 전원 제어, 콘솔, 센서 확인 가능",
         "tags": [
-            "Server",
-            "Hardware"
+            "Server"
         ]
     },
     {
@@ -13,8 +12,7 @@
         "abbreviation": "Out Of Band",
         "meaning": "일반 서비스 네트워크와 분리된 관리 전용 네트워크",
         "tags": [
-            "Server",
-            "Network"
+            "Server"
         ]
     },
     {
@@ -22,8 +20,7 @@
         "abbreviation": "Intelligent Platform Management Interface",
         "meaning": "BMC를 제어하기 위한 표준 관리 인터페이스 규격",
         "tags": [
-            "Server",
-            "Hardware"
+            "Server"
         ]
     },
     {
@@ -31,8 +28,7 @@
         "abbreviation": "Power Supply Unit",
         "meaning": "서버 전원 공급 장치",
         "tags": [
-            "Server",
-            "Hardware"
+            "Server"
         ]
     },
     {
@@ -40,8 +36,7 @@
         "abbreviation": "Hot Swapping",
         "meaning": "서버를 끄지 않고 디스크/PSU 등 부품 교체 가능",
         "tags": [
-            "Server",
-            "Hardware"
+            "Server"
         ]
     },
     {
@@ -49,8 +44,7 @@
         "abbreviation": "Hard Disk Backplane",
         "meaning": "다수의 HDD/SSD를 연결하는 중앙 연결 보드",
         "tags": [
-            "Server",
-            "Hardware"
+            "Server"
         ]
     },
     {
@@ -58,8 +52,7 @@
         "abbreviation": "Layer 4 Load Balancer",
         "meaning": "TCP/UDP 기반, IP·포트 기준 분산",
         "tags": [
-            "Network",
-            "LB"
+            "Network"
         ]
     },
     {
@@ -67,8 +60,7 @@
         "abbreviation": "Layer 7 Load Balancer",
         "meaning": "HTTP/HTTPS 기반, URL·Header·Host 기준 분산",
         "tags": [
-            "Network",
-            "LB"
+            "Network"
         ]
     },
     {
@@ -76,8 +68,7 @@
         "abbreviation": "TLS Termination",
         "meaning": "TLS 복호화를 로드밸런서에서 처리",
         "tags": [
-            "Network",
-            "Security"
+            "Network"
         ]
     },
     {
@@ -85,8 +76,7 @@
         "abbreviation": "TLS Passthrough",
         "meaning": "TLS 암호화 상태 그대로 백엔드로 전달",
         "tags": [
-            "Network",
-            "Security"
+            "Network"
         ]
     },
     {
@@ -110,8 +100,7 @@
         "abbreviation": "Software-Defined Networking",
         "meaning": "VXLAN/Geneve 등 오버레이 네트워크 기반 가상 네트워크",
         "tags": [
-            "Network",
-            "Virtualization"
+            "Network"
         ]
     },
     {
@@ -119,8 +108,7 @@
         "abbreviation": "Network File System v3",
         "meaning": "Kernel 기반, UDP/TCP 지원",
         "tags": [
-            "Storage",
-            "FS"
+            "Storage"
         ]
     },
     {
@@ -128,8 +116,7 @@
         "abbreviation": "Network File System v4",
         "meaning": "Kernel 기반, TCP only",
         "tags": [
-            "Storage",
-            "FS"
+            "Storage"
         ]
     },
     {
@@ -137,8 +124,7 @@
         "abbreviation": "CephFS Kernel",
         "meaning": "커널에서 직접 처리하는 Ceph 파일시스템",
         "tags": [
-            "Storage",
-            "Ceph"
+            "Storage"
         ]
     },
     {
@@ -146,8 +132,7 @@
         "abbreviation": "ceph-fuse",
         "meaning": "유저 스페이스(FUSE) 기반 CephFS",
         "tags": [
-            "Storage",
-            "Ceph"
+            "Storage"
         ]
     },
     {
@@ -155,8 +140,7 @@
         "abbreviation": "GlusterFS",
         "meaning": "분산 파일시스템",
         "tags": [
-            "Storage",
-            "FS"
+            "Storage"
         ]
     },
     {
@@ -164,8 +148,7 @@
         "abbreviation": "RADOS Gateway",
         "meaning": "Ceph의 S3 호환 Object Storage",
         "tags": [
-            "Storage",
-            "Ceph"
+            "Storage"
         ]
     },
     {
@@ -213,8 +196,7 @@
         "abbreviation": "InfiniBand",
         "meaning": "고속 네트워크 인터커넥트 기술 전체",
         "tags": [
-            "HPC",
-            "Network"
+            "HPC"
         ]
     },
     {
@@ -222,8 +204,7 @@
         "abbreviation": "Host Channel Adapter",
         "meaning": "InfiniBand NIC",
         "tags": [
-            "HPC",
-            "Hardware"
+            "HPC"
         ]
     },
     {
@@ -231,8 +212,7 @@
         "abbreviation": "Unified Fabric Manager",
         "meaning": "NVIDIA/Mellanox 패브릭 관리 솔루션",
         "tags": [
-            "HPC",
-            "Management"
+            "HPC"
         ]
     },
     {
@@ -240,8 +220,7 @@
         "abbreviation": "NVIDIA Collective Communications Library",
         "meaning": "GPU 간 통신 최적화 라이브러리",
         "tags": [
-            "GPU",
-            "AI"
+            "GPU"
         ]
     },
     {
@@ -249,8 +228,7 @@
         "abbreviation": "GPU Direct RDMA Copy",
         "meaning": "GPU 메모리 직접 접근 라이브러리",
         "tags": [
-            "GPU",
-            "HPC"
+            "GPU"
         ]
     },
     {
@@ -258,8 +236,7 @@
         "abbreviation": "InfiniBand Speed Grades",
         "meaning": "IB 속도 등급 (100G / 200G / 400G)",
         "tags": [
-            "HPC",
-            "Network"
+            "HPC"
         ]
     },
     {
@@ -267,8 +244,7 @@
         "abbreviation": "Helm",
         "meaning": "Kubernetes 패키지 매니저",
         "tags": [
-            "K8s",
-            "DevOps"
+            "K8s"
         ]
     },
     {
@@ -276,8 +252,7 @@
         "abbreviation": "Terraform",
         "meaning": "IaC(Infrastructure as Code) 도구",
         "tags": [
-            "DevOps",
-            "Cloud"
+            "DevOps"
         ]
     },
     {
@@ -285,8 +260,7 @@
         "abbreviation": "NodePool",
         "meaning": "동일 설정의 노드 그룹",
         "tags": [
-            "K8s",
-            "Cloud"
+            "K8s"
         ]
     },
     {
@@ -294,8 +268,7 @@
         "abbreviation": "Rolling Update",
         "meaning": "서비스 중단 없이 점진적 업데이트",
         "tags": [
-            "K8s",
-            "DevOps"
+            "K8s"
         ]
     },
     {
@@ -303,7 +276,6 @@
         "abbreviation": "Workload API",
         "meaning": "비즈니스 요청을 플랫폼 로직으로 연결하는 중간 추상 계층",
         "tags": [
-            "Platform",
             "K8s"
         ]
     },
@@ -312,8 +284,7 @@
         "abbreviation": "Lightweight Directory Access Protocol",
         "meaning": "사용자/조직 정보 디렉토리",
         "tags": [
-            "Security",
-            "Auth"
+            "Security"
         ]
     },
     {
@@ -337,8 +308,7 @@
         "abbreviation": "Center for Internet Security",
         "meaning": "보안 벤치마크 제공 기관",
         "tags": [
-            "Security",
-            "Compliance"
+            "Security"
         ]
     },
     {
@@ -346,8 +316,7 @@
         "abbreviation": "End Of Support",
         "meaning": "기술 지원 종료",
         "tags": [
-            "Ops",
-            "Management"
+            "Ops"
         ]
     },
     {
@@ -355,8 +324,7 @@
         "abbreviation": "Maintenance Agreement",
         "meaning": "유지보수 계약",
         "tags": [
-            "Ops",
-            "Contract"
+            "Ops"
         ]
     },
     {
@@ -364,8 +332,7 @@
         "abbreviation": "System Engineer",
         "meaning": "시스템 구성·운영·장애 대응",
         "tags": [
-            "Role",
-            "Ops"
+            "Role"
         ]
     },
     {
@@ -373,8 +340,7 @@
         "abbreviation": "Network Engineer",
         "meaning": "네트워크 설계·운영",
         "tags": [
-            "Role",
-            "Network"
+            "Role"
         ]
     },
     {
@@ -382,8 +348,7 @@
         "abbreviation": "Service Account Manager",
         "meaning": "서비스/고객 계정 총괄 담당",
         "tags": [
-            "Role",
-            "Business"
+            "Role"
         ]
     },
     {
@@ -391,8 +356,7 @@
         "abbreviation": "Enterprise Management System",
         "meaning": "장비·서버 관리 시스템",
         "tags": [
-            "Ops",
-            "System"
+            "Ops"
         ]
     },
     {
@@ -400,8 +364,7 @@
         "abbreviation": "Preboot eXecution Environment",
         "meaning": "네트워크 기반 OS 설치",
         "tags": [
-            "Ops",
-            "Provisioning"
+            "Ops"
         ]
     },
     {
@@ -409,7 +372,6 @@
         "abbreviation": "Linkage / Handling / Communication",
         "meaning": "업무 연계 / 처리 / 커뮤니케이션",
         "tags": [
-            "Concept",
             "Work"
         ]
     }
