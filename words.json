@@ -1,32 +1,237 @@
 [
-  {
-    "id": 1,
-    "word": "Serendipity",
-    "abbreviation": "Seren",
-    "meaning": "The occurrence and development of events by chance in a happy or beneficial way."
-  },
-  {
-    "id": 2,
-    "word": "Ephemeral",
-    "abbreviation": "Eph",
-    "meaning": "Lasting for a very short time."
-  },
-  {
-    "id": 3,
-    "word": "Ubiquitous",
-    "abbreviation": "Ubiq",
-    "meaning": "Present, appearing, or found everywhere."
-  },
-  {
-    "id": 4,
-    "word": "Mellifluous",
-    "abbreviation": "Mel",
-    "meaning": "(of a voice or words) sweet or musical; pleasant to hear."
-  },
-  {
-    "id": 5,
-    "word": "Labyrinthine",
-    "abbreviation": "Lab",
-    "meaning": "Like a labyrinth; irregular and twisting."
-  }
+    {
+        "word": "BMC",
+        "abbreviation": "Baseboard Management Controller",
+        "meaning": "서버 메인보드에 탑재된 하드웨어 관리 전용 컨트롤러. 전원 제어, 콘솔, 센서 확인 가능"
+    },
+    {
+        "word": "OOB",
+        "abbreviation": "Out Of Band",
+        "meaning": "일반 서비스 네트워크와 분리된 관리 전용 네트워크"
+    },
+    {
+        "word": "IPMI",
+        "abbreviation": "Intelligent Platform Management Interface",
+        "meaning": "BMC를 제어하기 위한 표준 관리 인터페이스 규격"
+    },
+    {
+        "word": "PSU",
+        "abbreviation": "Power Supply Unit",
+        "meaning": "서버 전원 공급 장치"
+    },
+    {
+        "word": "Hot Swap",
+        "abbreviation": "Hot Swapping",
+        "meaning": "서버를 끄지 않고 디스크/PSU 등 부품 교체 가능"
+    },
+    {
+        "word": "Backplane",
+        "abbreviation": "Hard Disk Backplane",
+        "meaning": "다수의 HDD/SSD를 연결하는 중앙 연결 보드"
+    },
+    {
+        "word": "L4 LB",
+        "abbreviation": "Layer 4 Load Balancer",
+        "meaning": "TCP/UDP 기반, IP·포트 기준 분산"
+    },
+    {
+        "word": "L7 LB",
+        "abbreviation": "Layer 7 Load Balancer",
+        "meaning": "HTTP/HTTPS 기반, URL·Header·Host 기준 분산"
+    },
+    {
+        "word": "TLS Termination",
+        "abbreviation": "TLS Termination",
+        "meaning": "TLS 복호화를 로드밸런서에서 처리"
+    },
+    {
+        "word": "TLS Passthrough",
+        "abbreviation": "TLS Passthrough",
+        "meaning": "TLS 암호화 상태 그대로 백엔드로 전달"
+    },
+    {
+        "word": "NAT",
+        "abbreviation": "Network Address Translation",
+        "meaning": "IP 주소 변환 (1:1 매핑 포함)"
+    },
+    {
+        "word": "PAT",
+        "abbreviation": "Port Address Translation",
+        "meaning": "IP + Port 변환 (NAT Overload)"
+    },
+    {
+        "word": "SDN",
+        "abbreviation": "Software-Defined Networking",
+        "meaning": "VXLAN/Geneve 등 오버레이 네트워크 기반 가상 네트워크"
+    },
+    {
+        "word": "NFSv3",
+        "abbreviation": "Network File System v3",
+        "meaning": "Kernel 기반, UDP/TCP 지원"
+    },
+    {
+        "word": "NFSv4",
+        "abbreviation": "Network File System v4",
+        "meaning": "Kernel 기반, TCP only"
+    },
+    {
+        "word": "CephFS (Kernel)",
+        "abbreviation": "CephFS Kernel",
+        "meaning": "커널에서 직접 처리하는 Ceph 파일시스템"
+    },
+    {
+        "word": "CephFS (FUSE)",
+        "abbreviation": "ceph-fuse",
+        "meaning": "유저 스페이스(FUSE) 기반 CephFS"
+    },
+    {
+        "word": "GlusterFS",
+        "abbreviation": "GlusterFS",
+        "meaning": "분산 파일시스템"
+    },
+    {
+        "word": "RGW",
+        "abbreviation": "RADOS Gateway",
+        "meaning": "Ceph의 S3 호환 Object Storage"
+    },
+    {
+        "word": "Thin Provisioning",
+        "abbreviation": "Thin Provisioning",
+        "meaning": "필요한 만큼만 용량을 지연 할당"
+    },
+    {
+        "word": "Deduplication",
+        "abbreviation": "Deduplication",
+        "meaning": "중복 데이터 제거"
+    },
+    {
+        "word": "Snapshot",
+        "abbreviation": "Snapshot",
+        "meaning": "특정 시점 상태를 메타데이터로 기록"
+    },
+    {
+        "word": "Replication",
+        "abbreviation": "Replication",
+        "meaning": "다른 스토리지/사이트로 데이터 복제"
+    },
+    {
+        "word": "Backup",
+        "abbreviation": "Backup",
+        "meaning": "장기 보관 목적의 물리적 데이터 복사"
+    },
+    {
+        "word": "IB",
+        "abbreviation": "InfiniBand",
+        "meaning": "고속 네트워크 인터커넥트 기술 전체"
+    },
+    {
+        "word": "HCA",
+        "abbreviation": "Host Channel Adapter",
+        "meaning": "InfiniBand NIC"
+    },
+    {
+        "word": "UFM",
+        "abbreviation": "Unified Fabric Manager",
+        "meaning": "NVIDIA/Mellanox 패브릭 관리 솔루션"
+    },
+    {
+        "word": "NCCL",
+        "abbreviation": "NVIDIA Collective Communications Library",
+        "meaning": "GPU 간 통신 최적화 라이브러리"
+    },
+    {
+        "word": "gdrcopy",
+        "abbreviation": "GPU Direct RDMA Copy",
+        "meaning": "GPU 메모리 직접 접근 라이브러리"
+    },
+    {
+        "word": "EDR/HDR/NDR",
+        "abbreviation": "InfiniBand Speed Grades",
+        "meaning": "IB 속도 등급 (100G / 200G / 400G)"
+    },
+    {
+        "word": "Helm",
+        "abbreviation": "Helm",
+        "meaning": "Kubernetes 패키지 매니저"
+    },
+    {
+        "word": "Terraform",
+        "abbreviation": "Terraform",
+        "meaning": "IaC(Infrastructure as Code) 도구"
+    },
+    {
+        "word": "NodePool",
+        "abbreviation": "NodePool",
+        "meaning": "동일 설정의 노드 그룹"
+    },
+    {
+        "word": "Rolling Update",
+        "abbreviation": "Rolling Update",
+        "meaning": "서비스 중단 없이 점진적 업데이트"
+    },
+    {
+        "word": "Workload API",
+        "abbreviation": "Workload API",
+        "meaning": "비즈니스 요청을 플랫폼 로직으로 연결하는 중간 추상 계층"
+    },
+    {
+        "word": "LDAP",
+        "abbreviation": "Lightweight Directory Access Protocol",
+        "meaning": "사용자/조직 정보 디렉토리"
+    },
+    {
+        "word": "KMS",
+        "abbreviation": "Key Management System",
+        "meaning": "암호화 키 관리"
+    },
+    {
+        "word": "OCSP",
+        "abbreviation": "Online Certificate Status Protocol",
+        "meaning": "인증서 유효성 실시간 확인"
+    },
+    {
+        "word": "CIS",
+        "abbreviation": "Center for Internet Security",
+        "meaning": "보안 벤치마크 제공 기관"
+    },
+    {
+        "word": "EOS",
+        "abbreviation": "End Of Support",
+        "meaning": "기술 지원 종료"
+    },
+    {
+        "word": "MA",
+        "abbreviation": "Maintenance Agreement",
+        "meaning": "유지보수 계약"
+    },
+    {
+        "word": "SE",
+        "abbreviation": "System Engineer",
+        "meaning": "시스템 구성·운영·장애 대응"
+    },
+    {
+        "word": "NE",
+        "abbreviation": "Network Engineer",
+        "meaning": "네트워크 설계·운영"
+    },
+    {
+        "word": "SAM",
+        "abbreviation": "Service Account Manager",
+        "meaning": "서비스/고객 계정 총괄 담당"
+    },
+    {
+        "word": "EMS",
+        "abbreviation": "Enterprise Management System",
+        "meaning": "장비·서버 관리 시스템"
+    },
+    {
+        "word": "PXE Boot",
+        "abbreviation": "Preboot eXecution Environment",
+        "meaning": "네트워크 기반 OS 설치"
+    },
+    {
+        "word": "L/H/C",
+        "abbreviation": "Linkage / Handling / Communication",
+        "meaning": "업무 연계 / 처리 / 커뮤니케이션"
+    }
 ]
