@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "word": "Serendipity",
+    "abbreviation": "Seren",
+    "meaning": "The occurrence and development of events by chance in a happy or beneficial way."
+  },
+  {
+    "id": 2,
+    "word": "Ephemeral",
+    "abbreviation": "Eph",
+    "meaning": "Lasting for a very short time."
+  },
+  {
+    "id": 3,
+    "word": "Ubiquitous",
+    "abbreviation": "Ubiq",
+    "meaning": "Present, appearing, or found everywhere."
+  },
+  {
+    "id": 4,
+    "word": "Mellifluous",
+    "abbreviation": "Mel",
+    "meaning": "(of a voice or words) sweet or musical; pleasant to hear."
+  },
+  {
+    "id": 5,
+    "word": "Labyrinthine",
+    "abbreviation": "Lab",
+    "meaning": "Like a labyrinth; irregular and twisting."
+  }
+]
