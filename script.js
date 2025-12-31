@@ -97,6 +97,9 @@ const app = {
         </div>
         <div class="card-face card-back">
           <div class="meaning-text">${word.meaning}</div>
+          <div class="tags-container">
+            ${word.tags ? word.tags.map(t => `<span class="tag">${t}</span>`).join('') : ''}
+          </div>
         </div>
       </div>
     `;
